@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+body { 
+  background-image: url(/imgs/bg_river.jpg);
+  background-position: center;
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.wrapper {
+  padding: 0 12px;
+  padding-top: 20px;
+  height: 100vh;
+  width: 100vw;
+}
+.wrapper .headerContainer { 
+  display: flex;
+  justify-content: flex-end;
+  height: 42px; 
+}
+
+.searchCityContainer {
+  background-color: #fff;
+  overflow: hidden;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  padding-right: 6px;
+  width: fit-content;
+}
+.searchCityContainer input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 0 12px;
+  height: 46px;
+}
+.searchCityContainer .btnSearch {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 36px;
+  width: 36px;
+  transition: background-color .25s;
+}     
+.searchCityContainer .btnSearch:hover { background-color: rgba(0, 0, 0, .04); }
+
+.wrapper .sectionContainer {
+  position: relative;
+  margin-top: 30px;
+  height: calc(100% - (42px + 30px));
+}
+
+.cardWeather {
+  background-color: #dfdfdf;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  height: fit-content;
+  width: 300px;
+  transition: all .15s;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  transform: translateX(-50%);
+}
+.cardWeatherIsHidden { top: -100%; }
+.cardWeather .cityTemperatureText { font-size: 1.1rem; }
+.cardWeather .weatherConditionalImg { margin: 12px auto; }
+.cardWeather .otherWeatherInfoContainer {
+  display: flex;
+  gap: 8px;
+}
+.otherWeatherInfoContainer .rowContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+.otherWeatherInfoContainer .rowContainer span {font-size: .95rem; }
+.otherWeatherInfoContainer .rowContainer h4 {
+  font-size: .9rem;
+  font-weight: 600;
+}

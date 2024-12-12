@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wheater Today</title>
+
+  <!-- CSS -->
+   <link rel="stylesheet" href="index.css">
+   <!-- Font Awesome -->
+   <script src="https://kit.fontawesome.com/d1caeaa7f8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <div class="wrapper">
+    <header class="headerContainer">
+      <div class="searchCityContainer">
+        <input 
+          placeholder="Nome da Cidade"
+          id="searchCity"  
+        />
+
+        <button 
+          type="button" 
+          class="btnSearch" 
+          onclick="handleSearchCity()"
+        >
+          <i class="fa-solid fa-search"></i>
+        </button>
+      </div>
+    </header>
+
+    <section class="sectionContainer">
+      <div id="cardWeather" class="cardWeather cardWeatherIsHidden">
+        <p id="dataCityTemperature" class="cityTemperatureText"> 
+          Belém, 30°C 
+        </p>
+
+        <img 
+          src="https://openweathermap.org/img/wn/10d@2x.png" 
+          alt="Weather Conditional"
+          id="weatherConditionalImg"
+          class="weatherConditionalImg"
+        >
+
+        <div class="otherWeatherInfoContainer">
+          <div class="rowContainer">
+            <span id="dataPressure"> 00% </span>
+
+            <h4> Pressão do Ar </h4>
+          </div>
+
+          <div class="rowContainer">
+            <span id="dataHumidity"> 00% </span>
+
+            <h4> Umidade do Ar </h4>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
